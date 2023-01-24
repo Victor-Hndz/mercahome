@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Mercahome</title>
+    <meta charset="utf-8">
+    <meta name="google-signin-client_id" content="128344394850-iglec8iv8e5chp5itgdamsbs2fshqn5d.apps.googleusercontent.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/">
+    <link rel="stylesheet" href="./style/style_general.css">
+    <link rel="stylesheet" href="./style/style_productos.css">
+    <link rel="stylesheet" href="./style/style_popupCarro.css">
+    <link rel="stylesheet" href="./style/style_cupon_popup.css">
+    <link rel="icon" type="image/x-icon" href="./img/general/favicon.ico">
+
+</head>
+
+<body>
+    <div class="sticky" id="barra_nav">
+        <div id="logo_wrapper">
+            <a class="mercahome-home-button" href="index.html">
+                <img src="./img/general/mercahome-logo.png" alt="mercahome-logo" id="logo">
+            </a>
+        </div>
+        <div id="menu_wrapper">
+            <label class="icon-menu" for="menu-bar">☰</label> 
+            <input type="checkbox" id="menu-bar">
+            <ul class="menu_nav">
+                <li>
+                    <form action="http://www.google.com/search" target="_blank" method="get">
+                        <input type="submit" value="" id="search_submit">
+                        <input type="text" id="search" name="q" placeholder="Buscar" required>    
+                    </form>
+                </li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="media.html">Noticias</a></li>
+                <li><a href="registro.html">Registro</a></li>
+                
+                <li id="boton_google_wrapper">
+                    <a id="boton_google">
+                    </a>
+                    <div id="nombre_usuario"></div>
+                </li>
+
+                <li id="carrito_boton_wrapper"> 
+                    <button class="carrito_boton" onclick="toggle_popup()">
+                            <div class="contenido_carrito">
+                                <span> Carrito </span>
+                                <i class="fa fa-basket-shopping" id="carrito_icono"></i><br>
+                            </div>
+                    </button>
+                </li>
+            </ul>                 
+        </div>
+    </div>
+
+    <div class="separacion"></div>        
+
+    <!-- POPUP CARRITO -->
+    <div class="sticky" id="carrito_popup">
+        <div id="carrito_popup_body">
+            <div class="carrito_popup_header">
+                <p class="carrito_popup_titulo">Tu lista de productos</p>
+                <button id="carrito_popup_cerrar" onclick="toggle_popup()">
+                    <i class="fa fa-rectangle-xmark"></i>
+                </button>
+            </div>
+            <div class="carrito_popup_content">
+                <div id="productos_wrapper_carrito">
+                </div>
+            </div>
+            <div class="carrito_popup_footer">
+                <div id="mensajes_carrito">
+                </div>   
+                <div id="resumen_carrito">
+                    <div id="iva_wrapper">
+                        <p>IVA:
+                            <span>
+                                <select id="inputIVA">
+                                    <option selected value>general: 21% </option>
+                                    <option>reducido: 10%</option>
+                                    <option>superreducido: 4%</option>
+                                </select>
+                            </span>
+                        </p>
+                    </div>
+                    <div id="descuento_wrapper">
+                        <p id="descuento_notificacion">
+                            DESCUENTO: <span id="descuento_aplicado"></span>%</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/POPUP CARRITO/ -->
+
+        
+    <div id="main">
+        <div class="body_wrapper">
+            <section class="content">
+                <div class="titulo_seccion">
+                    <h2>Productos</h2>
+                </div>
+                <div class="productos_wrapper" id="producto">
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <template id="template-producto">
+        <div class="producto">
+            <a class="producto_tarjeta" href="">
+                <div class="producto_img">
+                    <img src="" alt="">
+                </div>
+                <div class="producto_info">
+                    <div class="producto_texto_wrapper">
+                        <p class="titulo"></p>
+                        <p class="descripcion"></p>
+                    </div>
+                    <div class="producto_precio_wrapper">
+                        <p class="descuento"></p>
+                        <p class="precio"></p>
+                    </div>
+                    <div id="estrellas">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                    </div>
+                    <p class="stock"> Stock: <span class="unidades_stock"></span></p>
+                    
+                    <div class="categorias_wrapper">
+                        <p class="categoria">Categoría: 
+                        </p>
+                    </div>
+                </div>
+            </a>
+            <div class="boton_wrapper">
+                <button class="boton_comprar" id="boton-comprar"">Añadir</button>
+            </div>
+        </div>
+    </template>
+
+    <template id="template-producto-flash">
+        <div class="producto flash">
+            <a class="producto_tarjeta" href="">
+                <p class="tiempo_oferta">Oferta hasta: <span class="t_restante"> </span></p>
+                <div class="producto_img">
+                    <img src="" alt="">
+                </div>
+                <div class="producto_info">
+                    <div class="producto_texto_wrapper">
+                        <p class="titulo"></p>
+                        <p class="descripcion"></p>
+                    </div>
+                    <div class="producto_precio_wrapper">
+                        <p class="descuento"></p>
+                        <p class="precio"></p>
+                    </div>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <p class="stock"> Stock: <span class="unidades_stock"></span></p>
+                    
+                    <div class="categorias_wrapper">
+                        <p class="categoria">Categoría: 
+                            <span class="categoria_nombre"></span> 
+                            <span class="categoria_nombre"></span> 
+                        </p>
+                    </div>
+                </div>
+            </a>
+            <div class="boton_wrapper">
+                <button class="boton_comprar" id="boton-comprar">Añadir</button>
+            </div>
+        </div>
+    </template>
+    
+    <div class="sticky" id="go_up">
+        <a href="#main">
+            <img src="./img/general/arrow.png" alt="Botón para subir arriba de la página.">
+        </a>
+    </div>
+
+    <div class="sticky" id="popup_notificacion">
+        <div id="popup_notificacion_body">
+            <button id="popup_notificacion_boton" onclick="cerrar_popup_notificacion()">
+                <i class="fa fa-rectangle-xmark"></i>
+            </button>
+            <p id="popup_notificacion_texto"></p>
+        </div>
+    </div>
+
+
+    <!-- CUPÓN -->
+    <div class="sticky" id="popup_cupon" onclick="accion_cupon()">
+        <div id="contenido_cupon" >
+            <div id="titulo_cupon">
+                <p>CUPON DESCUENTO</p> 
+            </div>
+            <div id ="descripcion_cupon">
+                <p id="texto_cupon"> </p>
+                <p id="tiempo_restante_cupon"> <span id="tiempo_cupon"></span>s</p>
+            </div>
+        </div>
+    </div>
+    <!--/CUPÓN/ -->
+
+    <footer>
+        <div class="autores_wrapper">
+            <p class="titulo_footer">Autores</p>
+            <div class="autores">
+                <p>Victor Hernández Sánchez</p>
+                <p>Javier Maciá Sempere</p>
+            </div>
+        </div>
+        <div class="redes_sociales_wrapper">
+            <p class="titulo_footer">Conócenos</p>
+            <div class="redes_sociales">
+                <a href="https://facebook.com" target="_blank">
+                    <img src="./img/redes/facebook.png" alt="Facebook"/>
+                </a>
+                <a href="https://instagram.com" target="_blank">
+                    <img src="./img/redes/instagram.png" alt="Instagram"/>
+                </a>
+                <a href="https://twitter.com" target="_blank">
+                    <img src="./img/redes/twitter.png" alt="Twitter"/>
+                </a>
+            </div>
+        </div>
+        <div class="paginas_relacionadas_wrapper">
+            <p class="titulo_footer">Páginas relacionadas</p>
+            <div class="paginas_relacionadas">
+                <a href="https://mercadona.es">Mercadona</a>                
+                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">AlesCandyShop</a>                
+                <a href="./Guia_de_estilo/guia-estilo.html">Nuestra Guía de Estilo</a>   
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+
+<script src="./javascript/productos.js"></script>
+<script src="./javascript/google_registro.js"></script>
+<script src="https://accounts.google.com/gsi/client" async defer></script>
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+

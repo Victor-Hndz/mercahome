@@ -1,0 +1,86 @@
+#popup_cupon{
+    z-index: 996;
+    height: 10em;
+    width: 22em;
+    top: 50%;
+    left: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../img/general/cupon.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#contenido_cupon{
+    height: 100%;
+    width: 100%;
+
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#contenido_cupon > div{
+    display: flex;
+    flex-direction: block;
+    align-items: center;
+    justify-content: center;
+}
+
+#contenido_cupon > div > p{
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+#titulo_cupon > p{
+    font-size: 1.6em;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    color: white;
+    font-weight: bolder;
+}
+
+#tiempo_restante_cupon{
+    color: white;
+    font-weight: bold;
+}
+
+@media (max-width: 1120px){
+    #popup_cupon{
+        height: 6em;
+        width: 10em;
+    }
+
+    #contenido_cupon{
+        height: 5.5em;
+        width: 9.5em;
+    }
+ 
+    #titulo_cupon > p{
+        font-size: 0.8em;
+        padding: 0;
+        margin: 0;
+        text-align: center;
+    }
+    
+    #titulo_cupon > :first-child{
+        font-size: 0.8em;
+    }
+
+    #descripcion_cupon > p{
+        font-size: 0.8em;
+    }
+
+    #descripcion_cupon > #tiempo_restante_cupon{
+        font-size: 0.8em;
+    }
+
+}

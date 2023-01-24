@@ -1,0 +1,130 @@
+
+/* ESTILO BIENVENIDA */
+.bienvenida {
+    position: relative;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    height: 24em;
+    width: 100%;
+}
+
+.texto_bienvenida{
+    position: absolute;
+    top: 20%;
+    right: 60%;
+    margin-left: 2%;
+}
+
+.bienvenida img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin: 0;
+}
+
+@media (max-width: 940px) {
+    .texto_bienvenida{
+        position: absolute;
+        top: 20%;
+        right: 50%;
+        margin-left: 2%;
+    }
+}
+
+/* ESTILO CUERPO */
+.content > div{
+    width: 85%;
+    margin-bottom: 4em;
+}
+
+.content > .titulo_seccion{
+    width: 100%;
+    margin-bottom: auto;
+    text-align: center;
+    background-color: #d5eebd;
+    padding-block: 1em;
+}
+
+.titulo_seccion h2{
+    margin: 0;
+}
+
+.content{
+    grid-column: 1 / 4;
+    grid-row: 1;
+    background-color: #fcfcfc;
+}
+
+@media (max-width: 1080px) {
+    .body_wrapper .content > div{
+        width: 100%;
+    }
+}
+
+/* ESTILO SEDES */
+.sedes_wrapper{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto;
+}
+
+
+.sedes_wrapper .sede{
+    background-color: #fcfcfc;
+    padding: 1em;
+    margin: 1em;
+    border-radius: 20px;
+    box-shadow: 0 0 10px #9ecaed;
+    height: fit-content;
+    text-align: center;
+}
+
+.sede iframe{
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.texto_sede{
+    font-weight: bolder;
+    display: block;
+    text-align: right;
+}
+
+@media (max-width: 920px) {
+    .sedes_wrapper{
+        display: block;
+    }
+
+}
+
+
+/* ESTILO VÍDEOS */
+.videos_wrapper{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+}
+
+.videos_wrapper .video{
+    background-color: #fcfcfc;
+    padding: 1em;
+    margin: 1em;
+    border-radius: 20px;
+    box-shadow: 0 0 10px #9ecaed;
+    height: fit-content;
+    text-align: center;
+}
+
+.video iframe{
+    width: 100%;
+    height: 24em;
+    border: 0;
+}
+
+@media (max-width: 920px) {
+    .videos_wrapper{
+        display: block;
+    }
+}

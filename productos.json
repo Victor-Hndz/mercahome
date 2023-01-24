@@ -1,0 +1,278 @@
+[
+    {
+        "id":1,
+        "flash":true,
+        "end_flash":"2023-12-31",
+        "enlace":" ",
+        "img":"./img/productos/1.jpg",
+        "alt":"Lechugas",
+        "titulo":"Lechugas iceberg",
+        "descripcion":"Venga, un chiste verde rápido. Una lechuga en moto. ¿Te ha parecido gracioso? En realidad este texto es para demostrar que sé ocultar descripciones muy largas",
+        "descuento":0.5,
+        "precio":1.5,
+        "n_estrellas":3,
+        "stock":10,
+        "n_categorias":1,
+        "categorias":[
+            {
+                "id":1,
+                "nombre":"Verduras"
+            }
+        ]
+    },
+    {
+        "id":2,
+        "flash":false,
+        "end_flash":0,
+        "enlace":" ",
+        "img":"./img/productos/2.jpg",
+        "alt":"Pepinos",
+        "titulo":"Pepinos",
+        "descripcion":"El pepino es muy bueno para la memoria. A un amigo le metieron uno por la punta de la nariz y aun se acuerda.",
+        "descuento":0,
+        "precio":1.5,
+        "n_estrellas":4,
+        "stock":12,
+        "n_categorias":1,
+        "categorias":[
+            {
+                "id":1,
+                "nombre":"Verduras"
+            }
+        ]
+    },
+    {
+        "id":3,
+        "flash":false,
+        "end_flash":0,
+        "enlace":"",
+        "img":"./img/productos/3.jpg",
+        "alt":"Zanahorias",
+        "titulo":"Zanahorias",
+        "descripcion":"La zanahoria es muy buena para la vista, ¿o acaso tú has visto algún conejo usar gafas?",
+        "descuento":0,
+        "precio":1,
+        "n_estrellas":5,
+        "stock":0,
+        "n_categorias":1,
+        "categorias":[
+            {
+                "id":1,
+                "nombre":"Verduras"
+            }
+        ]
+    },
+    {
+        "id":4,
+        "flash":false,
+        "end_flash":0,
+        "enlace":"",
+        "img":"./img/productos/4.jpg",
+        "alt":"Puerros",
+        "titulo":"Puerros",
+        "descripcion":"-¿Te gustan los puerros? -Sí, y también los guatos.",
+        "descuento":0,
+        "precio":1.5,
+        "n_estrellas":2,
+        "stock":3,
+        "n_categorias":1,
+        "categorias":[
+            {
+                "id":1,
+                "nombre":"Verduras"
+            }
+        ]
+    },
+    {
+        "id":5,
+        "flash":true,
+        "end_flash":"2023-02-22",
+        "enlace":" ",
+        "img":"./img/productos/5.jpg",
+        "alt":"Maquinilla de afeitar",
+        "titulo":"Maquinilla de afeitar",
+        "descripcion":"Esto era un hombre tan pazguato, que cuando se afeitaba la barba, como no tenía espejo, se miraba en su foto del DNI.",
+        "descuento":14.5,
+        "precio":45,
+        "n_estrellas":5,
+        "stock":1,
+        "n_categorias":2,
+        "categorias":[
+            {
+                "id":1,
+                "nombre":"Tecnología"
+            },
+            {
+                "id":2,
+                "nombre":"Higiene"
+            }
+        ]
+    },
+    {
+        "id":6,
+        "flash":false,
+        "end_flash":0,
+        "enlace":" ",
+        "img":"./img/productos/6.jpg",
+        "alt":"Irrigador dental",
+        "titulo":"Irrigador dental",
+        "descripcion":"Era un paciente que tenía tanta saliva que en vez de hacerle un puente, el dentista le hizo una presa.",
+        "descuento":0,
+        "precio":55.99,
+        "n_estrellas":5,
+        "stock":3,
+        "n_categorias":1,
+        "categorias":[
+            {
+                "id":1,
+                "nombre":"Tecnología"
+            },
+            {
+                "id":2,
+                "nombre":"Higiene"
+            }
+        ]
+    },
+    {
+        "id":7,
+        "flash":false,
+        "end_flash":0,
+        "enlace":" ",
+        "img":"./img/productos/7.jpg",
+        "alt":"Jabón pastilla",
+        "titulo":"Jabón pastilla",
+        "descripcion":"Esto era un tigre que se comió un jabón y ahora es puma.",
+        "descuento":0,
+        "precio":0.99,
+        "n_estrellas":4,
+        "stock":38,
+        "n_categorias":1,
+        "categorias":[
+            {
+                "id":1,
+                "nombre":"Higiene"
+            }
+        ]
+    },
+    {
+        "id":8,
+        "flash":true,
+        "end_flash":"2022-06-18",
+        "enlace":" ",
+        "img":"./img/productos/8.jpg",
+        "alt":"champú",
+        "titulo":"Champú HS",
+        "descripcion":"-Oye Manolo pásame otro shampoo. -Pero si en el baño hay uno. -Sí, pero ese es para cabello seco y yo ya me lo he mojado.",
+        "descuento":5,
+        "precio":17.98,
+        "n_estrellas":3,
+        "stock":12,
+        "n_categorias":1,
+        "categorias":[
+            {
+                "id":1,
+                "nombre":"Higiene"
+            }
+        ]
+    },
+    {
+        "id":9,
+        "flash":false,
+        "end_flash":0,
+        "enlace":" ",
+        "img":"./img/productos/9.jpg",
+        "alt":"paté de gato",
+        "titulo":"Paté de gato",
+        "descripcion":"Entra un ladrón a robar un banco con un gato en la mano y dice: -¡Manos arriba o aprieto el gatillo!",
+        "descuento":0,
+        "precio":1.25,
+        "n_estrellas":1,
+        "stock":40,
+        "n_categorias":2,
+        "categorias":[
+            {
+                "id":1,
+                "nombre":"Mascotas"
+            },
+            {
+                "id":2,
+                "nombre":"Gatos"
+            }
+        ]
+    },
+    {
+        "id":10,
+        "flash":false,
+        "end_flash":0,
+        "enlace":" ",
+        "img":"./img/productos/10.jpg",
+        "alt":"paté de perro",
+        "titulo":"Paté de perro",
+        "descripcion":"¿De qué lado los perros tienen más pelo? Del lado de afuera. Venga, otro que sé que te gustan: ¿ Cuál es el superhéroe de los perros? El Dober Man.",
+        "descuento":1,
+        "precio":2.25,
+        "n_estrellas":3,
+        "stock":12,
+        "n_categorias":2,
+        "categorias":[
+            {
+                "id":1,
+                "nombre":"Mascotas"
+            },
+            {
+                "id":2,
+                "nombre":"Perros"
+            }
+        ]
+    },
+    {
+        "id":11,
+        "flash":false,
+        "end_flash":0,
+        "enlace":" ",
+        "img":"./img/productos/11.jpg",
+        "alt":"comida de peces",
+        "titulo":"Comida para peces",
+        "descripcion":"¿Cuál es el pez que dirige al país? El pez-idente. ¿Y el que dirige el mundo? El pez-idente del mundo. ¿Y el que dirige el universo? El pez-idente del universo. ¿Y el que da leche? El pez-on.",
+        "descuento":0,
+        "precio":1.98,
+        "n_estrellas":4,
+        "stock":0,
+        "n_categorias":2,
+        "categorias":[
+            {
+                "id":1,
+                "nombre":"Mascotas"
+            },
+            {
+                "id":2,
+                "nombre":"Peces"
+            }
+        ]
+    },
+    {
+        "id":12,
+        "flash":false,
+        "end_flash":0,
+        "enlace":" ",
+        "img":"./img/productos/12.jpg",
+        "alt":"Comida para tortugas",
+        "titulo":"Comida para tortugas",
+        "descripcion":"Una tortuga atropella a un caracol, llaman a la policía y la tortuga le dice: -¡No sé qué ocurrió, policía! ¡Todo sucedió tan rápido!",
+        "descuento":5.35,
+        "precio":6.98,
+        "n_estrellas":3,
+        "stock":32,
+        "n_categorias":2,
+        "categorias":[
+            {
+                "id":1,
+                "nombre":"Mascotas"
+            },
+            {
+                "id":2,
+                "nombre":"Tortugas"
+            }
+        ]
+    }
+]

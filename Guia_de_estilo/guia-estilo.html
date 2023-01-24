@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Guía de estilo</title>
+    <link rel="stylesheet" href="style_general.css">
+    <link rel="stylesheet" href="./style/style_media.css">
+    <link rel="stylesheet" href="./style/style_registro.css">
+    <link rel="icon" type="image/x-icon" href="./img/general/favicon.ico">
+    <link rel="stylesheet" href="https://toert.github.io/Isolated-Bootstrap/versions/4.1.0/iso_bootstrap4.1.0min.css">
+    
+</head>
+
+<div class="sticky" id="barra_nav">
+    <div id="logo_wrapper">
+        <a class="mercahome-home-button" href="./html/index.html">
+            <img src="./img/general/mercahome-logo.png" alt="mercahome-logo" id="logo">
+        </a>
+    </div>
+    <div id="menu_wrapper">
+        <label class="icon-menu" for="menu-bar">☰</label> 
+        <input type="checkbox" id="menu-bar">
+        <ul class="menu_nav">
+            <li>
+                <form action="http://www.google.com/search" target="_blank" method="get">
+                    <input type="submit" value="" alt="buscar" id="search_submit">
+                    <input type="text" id="search" name="q" placeholder="Buscar" required>    
+                </form>
+            </li>
+            <li><a href="./html/productos.html">Productos</a></li>
+            <li><a href="./html/media.html">Noticias</a></li>
+            <li><a href="./html/registro.html">Registro</a></li>
+        </ul>                   
+    </div>
+</div>
+
+<div id="main">
+    <div class="separacion"></div>        
+    <div class="body_wrapper">
+        <h1>Estilo Cabecera H1</h1>
+        <h2>Estilo Cabecera H2</h2>
+        <h3>Estilo Cabecera H3</h3>
+        <h4>Estilo Cabecera H4</h4>
+        <p>Estilo P</p>
+        <p>Colores predeterminados principales:</p>
+        <div class="grid_colores">
+            <div id="color1"></div>
+            <div id="color2"></div>
+            <div id="color3"></div>
+            <div id="color4"></div>    
+            <div id="color5"></div>  
+            <div id="color6"></div>
+            <div id="color7"></div>
+            <div id="color8"></div>  
+            <div id="color9"></div>
+            <div id="color10"></div>
+            <div id="color11"></div>
+            <div id="color12"></div>   
+            <div id="color13"></div>
+            <div id="color14"></div>
+            <div id="color15"></div>
+        </div>
+
+        <div class="separacion"></div>        
+
+        <section class="content">
+            <div class="titulo_seccion">
+                <h2>Título de sección de productos</h2>
+            </div>
+            <section class="productos_wrapper">
+                <div class="producto">
+                    <a class="producto_tarjeta" href="#">
+                        <div class="producto_img">
+                            <img src="./img/productos/12.jpg" alt="Texto alternativo">
+                        </div>
+                        <div class="producto_info">
+                            <div class="producto_texto_wrapper">
+                                <p class="titulo">Producto normal</p>
+                                <p class="descripcion">
+                                    Descripción normal. Cuando hay mucho texto, este se oculta: Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni, eligendi. Saepe iste, quos aperiam, minus fugiat consectetur eligendi inventore impedit ipsam iure delectus officia et doloremque unde sequi reiciendis. Quis!
+                                </p>
+                            </div>
+                            <div class="producto_precio_wrapper">
+                                <p class="precio">Precio€</p>
+                            </div>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star "></span>
+                            <span class="fa fa-star "></span>
+                            <p class="stock"> Stock: <span class="unidades_stock"> 32 </p>
+                            
+                            <div class="categorias_wrapper">
+                                <p class="categoria">Categoría: 
+                                    <span class="categoria_nombre">Categoría</span> 
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="boton_wrapper">
+                        <button class="boton_comprar" onclick="addCarrito()">Añadir</button>
+                    </div>
+                </div>
+
+                <div class="producto flash">
+                    <a class="producto_tarjeta" href="#">
+                        <p class="tiempo_oferta">Oferta hasta: <span class="tiempo_restante"></span>00d:00h:00m</span></p>
+                        <div class="producto_img">
+                            <img src="./img/productos/5.jpg" alt="Prodcuto flash">
+                        </div>
+                        <div class="producto_info">
+                            <div class="producto_texto_wrapper">
+                                <p class="titulo">Producto flash. Si este título es largo simplemente se corta cuando llega al final, y ya, como se puede observar aquí.</p>
+                                <p class="descripcion">Esto es una descripción corta.</p>
+                            </div>
+                            <div class="producto_precio_wrapper">
+                                <p class="descuento"> Descuento€</p>
+                                <p class="precio">Precio€</p>
+                            </div>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <p class="stock"> Stock: <span class="unidades_stock"> 0 </p>
+                            <div class="categorias_wrapper">
+                                <p class="categoria">Categoría: 
+                                <span class="categoria_nombre">Dos</span> 
+                                <span class="categoria_nombre">Categorías</span>
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="boton_wrapper">
+                        <a class="boton_comprar" href="http://amazon.es" target="_blank">Comprar en Amazon</a>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </div>
+</div>
+
+<div class="separacion"></div>     
+
+<div class="seccion-principal noticias">
+    <section class="articulos">
+        <div class="articulo-container">
+            <a class="link-noticia" href="https://google.com" target="_blank">
+                <div class="imagen-noticia-container">
+                    <picture>
+                        <img class="img-noticia" src="./img/media/test.jpg" alt="test">
+                    </picture>
+                    <div class="caption-imagen">caption, si es grande se oculta</div>
+                </div>
+                <div class="texto-noticia-container">
+                    <h2 class="ambito">ámbito de la noTICIA SIEMPRE EN MAYúSCulas sigue la línea si se pasa.</h2>
+                    <p class="fecha">Fecha</p>
+                    <p class="autor">Autor</p>
+                    <p class="contenido">Texto de la noticia, puede ser infinitamente largo. Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis modi quam id repudiandae laudantium alias ullam? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi, iste at repellat, atque minima maiores veniam magni.</p>
+                </div> 
+            </a>
+            <div class="marco-like">
+                <p class="likes-totales">likes</p>
+            </div>
+            <div class="like-container">
+                <input type="checkbox" id="id1">
+                <label class="checkbox-like" for="id1"></label>
+            </div>
+        </div>
+    </section>
+    <section class="noticias-mas-leidas" id="mas-leidas">
+        <div class="noticias-leidas-container">
+            <h2 class="mas-leido">Sección de Lo más leído</h2>
+            <div class="noticia-mas-leida">
+                <a class="link-noticia-mas-leida" href="https://youtube.com" target="_blank">
+                    <div class="noticia-leida-img">
+                        <img class="img-noticia-leida" src="./img/media/pera.png" alt="pera">
+                        <img class="img-noticia-leida-hover" src="./img/media/pera_mordida.png" alt="pera">
+                    </div>
+                    <div class="noticia-leida-texto">
+                        <p>Aquí van las noticias más leídas. Están justificadas.</p>
+                    </div>
+                </a>
+                <a class="link-noticia-mas-leida" href="https://youtube.com" target="_blank">
+                    <div class="noticia-leida-img">
+                        <img class="img-noticia-leida" src="./img/media/pera.png" alt="pera">
+                        <img class="img-noticia-leida-hover" src="./img/media/pera_mordida.png" alt="pera">
+                    </div>
+                    <div class="noticia-leida-texto ultimo">
+                        <p>Si es la última, no se pone la barra de separación. Tiene un tamaño mínimo pero no máximo. Además, se oculta a un tamaño de pantalla para que sea responsive. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus, incidunt blanditiis enim ipsam voluptatum recusandae laborum magni porro at fugiat, hic placeat quo, ad facilis consectetur. Dicta porro autem quisquam.</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+</div>
+
+<div class="separacion"></div> 
+
+<div class="bootstrap">
+    <div class="form-container formulario">
+        <form>
+        <h4 class="titulo">Título de la sección</h4>
+        <div class="form-group row">
+            <label for="inputEmail4" class="col-sm-5 col-form-label">Ejemplo de campo*</label>
+            <div class="col-sm-7">
+                <input type="email" class="form-control" id="inputEmail4" placeholder="Email@email.com" required>
+            </div>  
+        </div>
+        <div class="form-row">
+            <div class="form group col-md-5">
+                <label for="inputTelf">Eejemplo numérico*</label>
+                <input type="number" class="form-control" id="inputTelf" placeholder="111 11 11 11" required>
+            </div>
+            <div class="form-group col-md-3">
+                <label for="inputPuerta">No requerido</label>
+                <input type="text" class="form-control" id="inputPuerta" placeholder="B">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputCom">Desplegable*</label >
+            <select id="inputCom" class="form-control" required>
+            <option disabled selected value> -- ELIGE UNA -- </option>
+            <option>C. Valenciana</option>
+            <option>Murcia</option>
+            <option>Madrid</option>
+            <option>Andalucía</option>
+            <option>Cataluña</option>
+            <option>..</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="inputDate">Fecha de Nacimiento*</label>
+            <input type="date" class="date" id="inputDate" required>
+        </div>
+        <div class="form-col pb-1">
+            <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="gridCheck1" required>
+            <label class="form-check-label" for="gridCheck1">Checkbox</label>
+            <a href="https://info.mercadona.es/es/terminos-y-condiciones" target="_blank" class="terms-link">Con un enlace.</a>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Botón</button>
+        </form>
+    </div>
+</div>
+
+<div class="separacion"></div> 
+
+<div class="sticky" id="go_up">
+    <a href="#main">
+        <img src="./img/general/arrow.png" alt="Botón para subir arriba de la página.">
+    </a>
+</div>
+
+<footer>
+    <div class="autores_wrapper">
+        <p class="titulo_footer">Autores</p>
+        <div class="autores">
+            <p>Victor Hernández Sánchez</p>
+            <p>Javier Maciá Sempere</p>
+        </div>
+    </div>
+    <div class="redes_sociales_wrapper">
+        <p class="titulo_footer">Conócenos</p>
+        <div class="redes_sociales">
+            <a href="https://facebook.com" target="_blank">
+                <img src="./img/redes/facebook.png" alt="Facebook"/>
+            </a>
+            <a href="https://instagram.com" target="_blank">
+                <img src="./img/redes/instagram.png" alt="Instagram"/>
+            </a>
+            <a href="https://twitter.com" target="_blank">
+                <img src="./img/redes/twitter.png" alt="Twitter"/>
+            </a>
+        </div>
+    </div>
+    <div class="paginas_relacionadas_wrapper">
+        <p class="titulo_footer">Páginas relacionadas</p>
+        <div class="paginas_relacionadas">
+            <a href="https://mercadona.es">Mercadona</a>                
+            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">AlesCandyShop</a>    
+            <a href="./Guia_de_estilo/guia-estilo.html">Nuestra Guía de Estilo</a>                  
+        </div>
+    </div>
+</footer>
+
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Mercahome</title>
+    <meta charset="utf-8">
+    <meta name="google-signin-client_id" content="128344394850-iglec8iv8e5chp5itgdamsbs2fshqn5d.apps.googleusercontent.com">
+    <link rel="stylesheet" href="./style/style_general.css">
+    <link rel="stylesheet" href="./style/style_index.css">
+    <link rel="icon" type="image/x-icon" href="./img/general/favicon.ico">
+
+
+</head>
+<body>
+    <div class="sticky" id="barra_nav">
+        <div id="logo_wrapper">
+            <a class="mercahome-home-button" href="index.html">
+                <img src="./img/general/mercahome-logo.png" alt="mercahome-logo" id="logo">
+            </a>
+        </div>
+        <div id="menu_wrapper">
+            <label class="icon-menu" for="menu-bar">☰</label> 
+            <input type="checkbox" id="menu-bar">
+            <ul class="menu_nav">
+                <li>
+                    <form action="http://www.google.com/search" target="_blank" method="get">
+                        <input type="submit" value="" id="search_submit">
+                        <input type="text" id="search" name="q" placeholder="Buscar" required>    
+                    </form>
+                </li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="media.html">Noticias</a></li>
+                <li><a href="registro.html">Registro</a></li>
+                <li id="boton_google_wrapper">
+                    <a id="boton_google">
+                    </a>
+                    <div id="nombre_usuario"></div>
+                </li>
+
+            </ul>                   
+        </div>
+    </div>
+        
+    <div id="main">
+        <div class="bienvenida">
+            <picture>
+                <source srcset="./img/fondos/comida1.jpg" media="(min-width: 920px)">
+                <img src="./img/fondos/mercado1.jpg" alt="mercahome-logo">
+            </picture>
+            <div class="texto_bienvenida">
+                <h1>Te damos la bienvenida a Mercahome</h1>
+                <p> Los mejores productos frescos.</p>
+                <p> "Fet per a dones, i per a homes"</p>
+            </div>
+        </div>
+        <div class="body_wrapper">
+            <section class="content">
+                <div class="titulo_seccion">
+                    <h2>Visita nuestros supermercados.</h2>
+                </div>
+                <div class="sedes_wrapper">
+                    <div class="sede">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d865.4145894028958!2d-0.5585937129139881!3d38.19528086626628!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd624c5135748a0b%3A0x11534073cd75cd28!2sMercadona!5e0!3m2!1ses!2ses!4v1669277657576!5m2!1ses!2ses" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                        </iframe> 
+                        <div class="texto_sede">
+                            <p class="poblacion">Santa Pola, Alicante, España</p>
+                            <p class="calle"> Carrer d'Elx, 62</p>
+                        </div>
+                    </div>
+
+                    <div class="sede">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d414393.0603805804!2d-8.786497773663752!3d41.141724971440716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd246ff658e0526f%3A0x141041cbdb207bec!2sMercadona!5e0!3m2!1ses!2ses!4v1669278201962!5m2!1ses!2ses" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                        <div class="texto_sede">
+                            <p class="poblacion">Matosinhos, Oporto, Portugal</p>
+                            <p class="calle"> R. Sousa Aroso, 705</p>
+                        </div>
+                    </div>
+
+                    <div class="sede">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3132.590736567364!2d-0.7062243844322572!3d38.26579699152912!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd63b6f0dd470d5b%3A0x76973038577a37c4!2sMercadona!5e0!3m2!1ses!2ses!4v1670428839176!5m2!1ses!2ses" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>                        
+                        <div class="texto_sede">
+                            <p class="poblacion">Elche, Alicante, España</p>
+                            <p class="calle"> Carrer Cristóbal Sanz, 7</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="titulo_seccion">
+                    <h2>Conócenos un poco más.</h2>
+                </div>
+                <div class="videos_wrapper">
+                    <div class="video">
+                        <iframe src="https://www.youtube.com/embed/sX42QS8nGgw" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+
+                    <div class="video">
+                        <iframe src="https://www.youtube.com/embed/ci2YKrNQHww" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    
+    <div class="sticky" id="go_up">
+        <a href="#main">
+            <img src="./img/general/arrow.png" alt="Botón para subir arriba de la página.">
+        </a>
+    </div>
+
+    <footer>
+
+        <div class="autores_wrapper">
+            <p class="titulo_footer">Autores</p>
+            <div class="autores">
+                <p>Victor Hernández Sánchez</p>
+                <p>Javier Maciá Sempere</p>
+            </div>
+        </div>
+        <div class="redes_sociales_wrapper">
+            <p class="titulo_footer">Conócenos</p>
+            <div class="redes_sociales">
+                <a href="https://facebook.com" target="_blank">
+                    <img src="./img/redes/facebook.png" alt="Facebook"/>
+                </a>
+                <a href="https://instagram.com" target="_blank">
+                    <img src="./img/redes/instagram.png" alt="Instagram"/>
+                </a>
+                <a href="https://twitter.com" target="_blank">
+                    <img src="./img/redes/twitter.png" alt="Twitter"/>
+                </a>
+            </div>
+        </div>
+        <div class="paginas_relacionadas_wrapper">
+            <p class="titulo_footer">Páginas relacionadas</p>
+            <div class="paginas_relacionadas">
+                <a href="https://mercadona.es">Mercadona</a>                
+                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">AlesCandyShop</a>   
+                <a href="./Guia_de_estilo/guia-estilo.html">Nuestra Guía de Estilo</a>            
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+
+<script src="./javascript/google_registro.js"></script>
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+<script src="https://accounts.google.com/gsi/client" async defer></script>

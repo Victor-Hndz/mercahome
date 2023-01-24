@@ -1,0 +1,189 @@
+/*ESTILO GENERAL*/
+.body-wrapper{
+    margin-top: 6em;
+    margin-bottom: 1em;
+    margin-left: 15%;
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/*-------------------------------------------------------------------------*/
+
+
+/*ESTILO DEL FORMULARIO*/
+.form-container{
+    width: 100%;
+    box-shadow: 0 0 10px #9ecaed;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: row;
+    background-color: #d6dbd0;
+}
+
+.titulo{
+    border-bottom: 1px solid #538b1e;
+    padding: .5em;
+    text-align: center;
+}
+
+.medio{
+    padding-top: 1.5em;
+}
+
+
+/*Estilo de imagen de fondo*/
+.img-container img{
+    width: 30em;
+    height: 100%;
+    padding-right: 10px;
+    border-radius: 10px;
+}
+
+@media (max-width: 1120px) {
+    .img-container{
+        display: none;
+    }
+}
+
+
+/*Selector de fecha*/
+.date{
+    width: 100%;
+    display: block;
+    background-color: #77a34e;
+    padding: 5px;
+    color: #ffffff;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    cursor: text;
+}
+
+::-webkit-calendar-picker-indicator{
+    background-color: #ffffff;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: color 0.15s ease-in-out 0s, background-color 0.15s ease-in-out 0s, border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+}
+
+::-webkit-calendar-picker-indicator:hover{
+    background-color: #e3ffc9;
+}
+
+
+/*Estilo casillas numéricas*/
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+
+/*Estilo de botón de registrarse y links*/
+.btn{
+    background-color: #77a34e !important;
+    border-color: #77a34e !important;
+}
+
+.btn:hover{
+    background-color: #538b1e !important;
+}
+
+.terms-link{
+    color:#538b1e !important;
+    font-weight: 500;
+}
+
+.terms-link:hover{
+    color: #77a34e;
+}
+
+.input-group-addon {
+    cursor: pointer;
+    padding: 0.5rem 0.75rem;
+    margin-bottom: 0;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.25;
+    color: #495057;
+    text-align: center;
+    background-color: #e9ecef;
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: 0.25rem;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-left: 0;
+}
+
+.input-group-addon, .input-group-btn {
+    white-space: nowrap;
+    vertical-align: middle;
+}
+
+
+.eye-box{
+    border-radius: 0.25rem;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-right: none;
+}
+
+.eye-icon{
+    color: grey;
+}
+
+#checks{
+    padding: 0.25em;
+    margin: 0.75em;
+    margin-left: 11.75em;
+    margin-right: 3em;
+    display: none;
+    box-shadow: 0 0 10px #77a34e;
+    border-radius: 0.25rem;
+    background-color: #d5edd9;
+    transition-duration: 0.5s;
+}
+
+@media (max-width: 775px) {
+    #checks{
+        margin: 0;
+    }
+
+}
+
+@media (min-width: 1125px) {
+    #checks{
+        margin: 0;
+    }
+}
+
+@media (min-width: 1325px) {
+    #checks{
+        margin: 0.75em !important;
+        margin-left: 11.75em !important;
+        margin-right: 3em !important;
+    }
+}
+
+.errores-derecha{
+    float: left;
+}
+
+.errores-izquierda{
+    float: right;
+}
+
+

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Mercahome</title>
+    <meta charset="utf-8">
+    <meta name="google-signin-client_id" content="128344394850-iglec8iv8e5chp5itgdamsbs2fshqn5d.apps.googleusercontent.com">
+    <link rel="stylesheet" href="./style/style_registro.css">
+    <link rel="icon" type="image/x-icon" href="./img/general/favicon.ico">
+    <link rel="stylesheet" href="./style/style_general.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/">
+    <link rel="stylesheet" href="https://toert.github.io/Isolated-Bootstrap/versions/4.1.0/iso_bootstrap4.1.0min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+  </head>
+  <body>
+    <div class="sticky" id="barra_nav">
+      <div id="logo_wrapper">
+          <a class="mercahome-home-button" href="index.html">
+              <img src="./img/general/mercahome-logo.png" alt="mercahome-logo" id="logo">
+          </a>
+      </div>
+      <div id="menu_wrapper">
+          <label class="icon-menu" for="menu-bar">☰</label> 
+          <input type="checkbox" id="menu-bar">
+          <ul class="menu_nav">
+              <li>
+                  <form action="http://www.google.com/search" target="_blank" method="get">
+                      <input type="submit" value="" id="search_submit">
+                      <input type="text" id="search" name="q" placeholder="Buscar" >    
+                  </form>
+              </li>
+              <li><a href="productos.html">Productos</a></li>
+              <li><a href="media.html">Noticias</a></li>
+              <li><a href="registro.html">Registro</a></li>
+              <li id="boton_google_wrapper">
+                <a id="boton_google">
+                </a>
+                <div id="nombre_usuario"></div>
+              </li>
+
+          </ul>                   
+      </div>
+    </div>
+
+    <div class="bootstrap">
+      <div class="main" id="main">
+        <div class="body-wrapper">
+          <div class="form-container">
+            <form onsubmit="return validarRegistro();">
+              <div class="form-group">
+                <h4 class="titulo col-md-11">DATOS DE REGISTRO</h4>
+                <p>Los datos con * no pueden dejarse en blanco.</p>
+                <p class="text-right col-sm-11 mb-1" id="errorNombre"></p>
+                <div class="form-group row">
+                  <label for="inputNombre" class="col-md-4 col-form-label">Nombre*</label>
+                  <div class="col-md-7">
+                    <input type="text" class="form-control" id="inputNombre">
+                  </div>  
+                </div>
+                <p class="text-right col-sm-11 mb-1" id="errorApell"></p>
+                <div class="form-group row">
+                  <label for="inputapell1" class="col-md-4 col-form-label">Primer Apellido*</label>
+                  <div class="col-md-7">
+                    <input type="text" class="form-control" id="inputApell1">
+                  </div>  
+                </div>
+                <div class="col-sm-9 mb-1" id="separator1"></div>
+                <div class="form-group row">
+                  <label for="inputApell2" class="col-md-4 col-form-label">Segundo Apellido</label>
+                  <div class="col-md-7">
+                    <input type="text" class="form-control" id="inputApell2">
+                  </div>  
+                </div>
+                <p class="text-right col-sm-11 mb-1" id="errorEmail"></p>
+                <div class="form-group row">
+                  <label for="inputEmail" class="col-md-4 col-form-label">Email*</label>
+                  <div class="col-md-7">
+                    <input type="email" class="form-control" id="inputEmail" placeholder="Email@email.com" >
+                  </div>  
+                </div>
+                <p class="text-right col-sm-11 mb-1" id="errorPass"></p>
+                <div class="form-group row">
+                  <label for="inputPassword1" class="col-md-4 col-form-label">Contraseña*</label>
+                  <div class="input-group col-md-7">
+                    <span class="input-group-addon eye-box" onclick="see(1)"><i id="toggle-eye1" class="fa fa-eye-slash eye-icon" aria-hidden="true"></i></span>
+                    <input type="password" class="form-control" id="inputPassword1" placeholder="Contraseña" maxlength="16">
+                  </div>
+                </div>
+                
+                <div id="checks">
+                  <div id="check1">
+                    <span class="fa fa-check-circle"></span><span> Entre 8 y 16 caracteres.</span>
+                  </div>
+                  <div id="check2">
+                    <span class="fa fa-check-circle"></span><span> Al menos 1 mayuscula. </span>
+                  </div>
+                  <div id="check3">
+                    <span class="fa fa-check-circle"></span> <span> Al menos 1 numero.</span>
+                  </div>
+                  <div id="check4">
+                    <span class="fa fa-check-circle"></span><span> Al menos 1 caracter especial.</span>
+                  </div>
+                </div>
+                <p class="text-right col-sm-11 mb-1" id="errorPass2"></p>
+                <div class="form-group row">
+                  <label for="inputPassword2" class="col-md-4 col-form-label">Repetir Contraseña*</label>
+                  <div class="input-group col-md-7">
+                    <span class="input-group-addon eye-box" onclick="see(2)"><i id="toggle-eye2" class="fa fa-eye-slash eye-icon" aria-hidden="true"></i></span>
+                    <input type="password" class="form-control" id="inputPassword2" placeholder="Repetir Contraseña" maxlength="16">
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="form-group">
+                <h4 class="titulo medio col-md-11">DATOS DE FACTURACIÓN</h4>
+                <div class="form-row">
+                  <div class="form-group col-md-5">
+                    <label for="inputAddress2">Dirección de facturación*</label>
+                    <input type="text" class="form-control" id="inputAddress2" placeholder="Calle Inventada, 16">
+                    <p class="errores-derecha" id="errorDir"></p>
+                  </div>
+                  <div class="form-group col-md-2">
+                    <label for="inputPiso">Piso</label>
+                    <input type="number" class="form-control" id="inputPiso" placeholder="3" maxlength="2">
+                  </div>
+                  <div class="form-group col-md-2">
+                    <label for="inputPuerta">Puerta</label>
+                    <input type="text" class="form-control" id="inputPuerta" placeholder="B" maxlength="2" style="text-transform:uppercase">
+                  </div>
+                  <div class="form-group col-md-2">
+                    <label for="inputCP">CP*</label>
+                    <input type="number" class="form-control" id="inputCP" placeholder="12345" maxlength="5">
+                    <p class="errores-izquierda" id="errorCP"></p>
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group col-md-4">
+                    <label for="inputCom">Comunidad*</label >
+                    <select id="inputCom" class="form-control" >
+                      <option value="0" disabled selected value> -- ELIGE-- </option>
+                      <option>C. Valenciana</option>
+                      <option>Murcia</option>
+                      <option>Madrid</option>
+                      <option>Andalucía</option>
+                      <option>Cataluña</option>
+                      <option>.</option>
+                    </select>
+                    <p class="errores-derecha" id="errorCom"></p>
+                  </div>
+                  <div class="form-group col-md-3">
+                    <label for="inputProv">Provincia*</label>
+                    <select id="inputProv" class="form-control" >
+                      <option value="0" disabled selected value> -- ELIGE-- </option>
+                      <option>.</option>
+                    </select>
+                    <p id="errorProv"></p>
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label for="inputCity">Ciudad*</label>
+                    <input type="text" class="form-control" id="inputCity" maxlength="20">
+                    <p class="errores-izquierda" id="errorCity"></p>
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form group col-md-4 pt-2">
+                    <label for="inputTelf">Teléfono*</label>
+                    <input type="text" class="form-control" id="inputTelf" placeholder="" maxlength="12">
+                    <p class="errores-derecha" id="errorTelf"></p>
+                  </div>
+                  <div class="form group col-md-3 pt-2">
+                    <label for="inputDNI">DNI*</label>
+                    <input type="text" class="form-control" id="inputDNI" placeholder="11111111A" maxlength="9" style="text-transform:uppercase">
+                    <p id="errorDNI"></p>
+                  </div>
+                  <div class="form-group col-md-4 pt-2">
+                    <label for="inputDate">Fecha de Nacimiento*</label>
+                    <input type="date" class="date" id="inputDate">
+                    <p class="errores-izquierda" id="errorDate"></p>
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group col-md-2 pt-2">
+                    <label for="inputPDC">País y DC*</label>
+                    <input type="text" class="form-control" id="inputPDC" placeholder="ES21" maxlength="4" style="text-transform:uppercase">
+                  </div>
+                  <div class="form-group col-md-2 pt-2">
+                    <label for="inputEnt">Entidad*</label>
+                    <input type="number" class="form-control" id="inputEnt" placeholder="1111" maxlength="4">
+                  </div>
+                  <div class="form-group col-md-2 pt-2">
+                    <label for="inputSuc">Sucursal*</label>
+                    <input type="number" class="form-control" id="inputSuc" placeholder="1111" maxlength="4">
+                  </div>
+                  <div class="form-group col-md-2 pt-2">
+                    <label for="inputDC">DC*</label>
+                    <input type="number" class="form-control" id="inputDC" placeholder="11" maxlength="2">
+                  </div>
+                  <div class="form-group col-md-3 pt-2">
+                    <label for="inputCuenta">Cuenta*</label>
+                    <input type="number" class="form-control" id="inputCuenta" placeholder="11111 11111" maxlength="10">
+                  </div>
+                  <p class="errores-derecha" id="errorCCC"></p>
+                </div>
+              </div>
+
+              <div class="form-col pb-1">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="terminos">
+                  <label class="form-check-label" for="gridCheck1">Acepto los</label>
+                  <a href="https://info.mercadona.es/es/terminos-y-condiciones" target="_blank" class="terms-link">Términos y Condiciones.</a>
+                </div>
+              </div>
+              <p class="errores-derecha" id="errorTerminos"></p>
+
+              <div class="form-col pb-2">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="gridCheck2">
+                  <label class="form-check-label" for="gridCheck2">Deseo Recibir Publicidad y Promociones exclusivas.</label>
+                </div>
+              </div>
+              
+              <button type="submit" class="btn btn-primary" id="btnRegistro">Registrarse</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="alert alert-info" style="display: none"></div>
+    <div class="alert alert-error" style="display: none"></div>
+    <footer>
+      <div class="autores_wrapper">
+          <p class="titulo_footer">Autores</p>
+          <div class="autores">
+              <p>Victor Hernández Sánchez</p>
+              <p>Javier Maciá Sempere</p>
+          </div>
+      </div>
+      <div class="redes_sociales_wrapper">
+          <p class="titulo_footer">Conócenos</p>
+          <div class="redes_sociales">
+              <a href="https://facebook.com" target="_blank">
+                  <img src="./img/redes/facebook.png" alt="Facebook"/>
+              </a>
+              <a href="https://instagram.com" target="_blank">
+                  <img src="./img/redes/instagram.png" alt="Instagram"/>
+              </a>
+              <a href="https://twitter.com" target="_blank">
+                  <img src="./img/redes/twitter.png" alt="Twitter"/>
+              </a>
+          </div>
+      </div>
+      <div class="paginas_relacionadas_wrapper">
+          <p class="titulo_footer">Páginas relacionadas</p>
+          <div class="paginas_relacionadas">
+              <a href="https://mercadona.es">Mercadona</a>                
+              <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">AlesCandyShop</a>    
+              <a href="./Guia_de_estilo/guia-estilo.html">Nuestra Guía de Estilo</a>                  
+          </div>
+      </div>
+    </footer>
+  </body>
+</html>
+
+<script src="./javascript/registro.js"></script>
+<script src="./javascript/google_registro.js"></script>
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+<script src="https://accounts.google.com/gsi/client" async defer></script>
+
